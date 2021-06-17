@@ -29,9 +29,10 @@ Example:
 
 createUser('Mesuara', 'Kaleziq') => 
 {
-  firstName: 'Mesuara',
-  lastName: 'Kaleziq'
+    firstName: 'Mesuara',
+    lastName: 'Kaleziq'
 }
+
 ```
 
 ### `setAge`
