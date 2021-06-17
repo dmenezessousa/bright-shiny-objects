@@ -9,49 +9,62 @@ function createUser(name, last){
 
 //`setAge`===================================================================================================
 function setAge(user, age){
-    let person = {firstName: user.firstName, lastName:user.lastName, age: age};
-    return person;
+    user.age = age;
+    return user;
 }
 
 //`incrementAge`=============================================================================================
 function incrementAge(user){
-    let addAge = {firstName: user.firstName, lastName:user.lastName, age: user.age + 1};
-    return addAge;
+    user.age++;
+    return user;
 }
 
 //`fixCar`===================================================================================================
 function fixCar(car){
-    const newCar = {make: car.make ,model: car.model,year: car.year, needsMaitenance: false};
-    return newCar;
+    car.needsMaitenance = false;
+    return car;
 }
 
 //`addGrades`================================================================================================
-function addGrades(students, grades){
-    const newGrade = {name:'Anthony DeRosa' ,email: 'anthony.derosa@codeimmersives.com', grades: [80, 100, 95, 88, 70, 90]};
-    return newGrade;
+function addGrades(student, newGrades){
+    student.grades = student.grades.concat(newGrades);
+    return student;
+
 }
 //`getDataType`==============================================================================================
-function getDataType(car, make){
-    const newCar = {make: car.make ,model: car.model,year: car.year, needsMaitenance: false};
-    return typeof newCar[make];
+function getDataType(car, key){
+    return typeof car[key];
+
 }
 
 //`addTodo`==================================================================================================
 function addTodo(todos, newTodo){
-    const addTodos = { title: 'Get gas', isComplete: false,
-    title: 'Buy bread', isComplete: true,
-    title: 'Call mom', isComplete: false};
-    return addTodos;
+    todos.push(newTodo);
+    return todos;
 
 }
 
 //`addSong`==================================================================================================
-function addSong(){
-
+function addSong(playlist, newSong){
+    playlist.songs.push(newSong);
+    playlist.duration += newSong.duration;
+    return playlist;
 }
 
 //`updateReportCard`=========================================================================================
-function updateReportCard(){
+function updateReportCard(reportCard, newGrades){
+    reportCard.grades.push(newGrade);
+    if(newGrades < reportGrades.lowestGrades){
+        reportCard.lowestGradse = newGrades;
+    }else if(newGrades > reportGrades.highestGrade){
+        reportCard.highestGrade = newGrade;
+    }
+    let totalGrade = 0;
+    for (let i = 0 ; i < reportCard.grades; i++){
+        gradeSum += grade;
+    }
+
+    return reportCard;
 
 }
 
